@@ -43,6 +43,10 @@ nltk.download('stopwords')
 english_sw = stopwords.words('english')
 
 
+if len(sys.argv)!=4:
+    print('Incorrect number of required command line arguments...')
+    exit()
+
 dataset_path = sys.argv[1]
 use_saves = sys.argv[2]
 suggestion = sys.argv[3]
@@ -143,7 +147,7 @@ tfidfVector = []
 if use_saves == '0':
     print('Building TF-IDF Vectors...')
     tfidfVector = [ranksmodule.computeTFIDFVector(text, wordDict, tfidf_) for text in clean_texts]
-else:
+elif use_saves == '1':
     with open("../pickle/tfIDF", "rb") as fp:   # Unpickling
        tfidfVector = pickle.load(fp)
 
@@ -168,7 +172,7 @@ if use_saves == '1':
     
     print('Completed!')
 
-else:
+elif use_saves=='0':
     if suggestion =='1':
         disjoint_explanations_prep = spacymapdocuments.p_explanations(new_df, nlp)
     if suggestion =='2':
