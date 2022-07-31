@@ -28,10 +28,10 @@ To run the code from pretrained data, you will have to download the pickle files
 ### Running in jupyter-notebook
 Download the repository and open jupyter-notebook file present in `/jupyter/Quran Search Engine.ipynb`.</br>
 The first cell of this notebook has some important variables that can be tinkered with to make use of either pretrained data or to run the program from scratch. In addition, a variable is also defined to use each of the 3 verse suggestion setting the user decides to choose from. </br>
-- use_loaded_inverted_index : set this value to 1 to use pretrained invertedindex, 0 to create the inverted index from scratch.
-- use_loaded_tfidf : set this value to 1 to use pretrained tfidf vectors, 0 to create tfidf vectors from scratch
-- use_loaded_spacy_maps : set this value to 1 to use pretrained spaCy objects, 0 to create spaCy objects in real time.
-- use_verse_suggestion : 1 for 'verse similarity', 2 for 'preprocessed explanation similarity', 3 for 'unpreprocessed explanation simialrity'
+- **use_loaded_inverted_index** : set this value to 1 to use pretrained invertedindex, 0 to create the inverted index from scratch.
+- **use_loaded_tfidf** : set this value to 1 to use pretrained tfidf vectors, 0 to create tfidf vectors from scratch
+- **use_loaded_spacy_maps** : set this value to 1 to use pretrained spaCy objects, 0 to create spaCy objects in real time.
+- **use_verse_suggestion** : 1 for 'verse similarity', 2 for 'preprocessed explanation similarity', 3 for 'unpreprocessed explanation simialrity'
 
 
 
