@@ -1,6 +1,6 @@
 # Information-Retrieval-on-Quran-Verses
-Computational Linguistics Team Lab Project, SS 2022. 
-Authors : Mohammed Abdul Khaliq, Ufkun-Bayram Menderes, Muhammad Saad Magdi. 
+Computational Linguistics Team Lab Project, SS 2022 </br>
+Authors : Mohammed Abdul Khaliq, Ufkun-Bayram Menderes, Muhammad Saad Magdi </br>
 
 ## Prerequisites
 Please make sure to download the relevant libraries from requirements.txt file :
