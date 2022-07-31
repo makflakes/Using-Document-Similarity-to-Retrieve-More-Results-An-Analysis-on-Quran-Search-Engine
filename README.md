@@ -32,7 +32,7 @@ The code can be run using the pretrained and computed data structures or running
 ### Precomputed vectors and data structures
 To run the code from pretrained data, you will have to download the pickle files from : [Pretrained Data](https://drive.google.com/drive/folders/1DWARVZnnqjK4xeCS3KTQ4b5Ky_EU_Ikz?usp=sharing) and place them in the `\pickle` folder of the repository.
 
-### Running in jupyter-notebook
+- ### Running in jupyter-notebook
 Download the repository and open jupyter-notebook file present in `/jupyter/Quran Search Engine.ipynb`.</br>
 The first cell of this notebook has some important variables that can be tinkered with to make use of either pretrained data or to run the program from scratch. In addition, a variable is also defined to use each of the 3 verse suggestion setting the user decides to choose from. </br>
 - **use_loaded_inverted_index** : set this value to 1 to use pretrained invertedindex, 0 to create the inverted index from scratch.
