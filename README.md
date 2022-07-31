@@ -1,4 +1,4 @@
-# Information-Retrieval-on-Quran-Verses
+# Using Document Similarity to Retrieve More Results : An Analysis on Quran Search Engine
 Computational Linguistics Team Lab Project, SS 2022 </br>
 
 **Authors** : </br> 
