@@ -62,7 +62,7 @@ python3 main.py '../data/Quran.csv' 1 2
 Your code should be good to go and you can now query the search engine.
 
 ### Program Flow
-
+![Screenshot](/figures/Untitled-1.png)
 
 ### Acknowledgements
 This paper was written for the course "Computational Lingustics Team Labs, 2022" as part of Masters programme in Computational Linguistics at University of Stuttgart. We would like to thank Dr. Roman Klinger and Mr. Yarik Menchaca Resendiz for their continued support, guidance and motivation throughout the course of the proejct.
