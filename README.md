@@ -41,7 +41,7 @@ The first cell of this notebook has some important variables that can be tinkere
 - **use_verse_suggestion** : 1 for 'preprocessed explanations', 2 for 'unpreprocessed explanations' and 3 for 'verse similarity'
 
 - ### Running in Python 3
-Download the repository and navigate to `\src` folder. <\br>
+Download the repository and navigate to `\src` folder. </br>
 The `main.py` file is the main program that runs the search engine. We have 3 additional command line arguments that determine the setting in which the program is run.
 
 ```
