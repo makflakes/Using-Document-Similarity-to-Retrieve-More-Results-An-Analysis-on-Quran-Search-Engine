@@ -7,7 +7,7 @@ Please make sure to download the relevant libraries from requirements.txt file :
 ```
 pip3 install requirements.txt
 ```
-For this code to work properly, it is essential to have spaCy version 2.3.x.<\br>
+For this code to work properly, it is essential to have spaCy version 2.3.x.</br>
 If it isnt already downloaded, run the following command :
 ```
 pip3 install -U spacy==2.3.7
