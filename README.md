@@ -30,7 +30,7 @@ This code is available in both python3 `/src` and jupyter-notebook `/jupyter`.
 The code can be run using the pretrained and computed data structures or running it from scratch.
 
 ### Precomputed vectors and data structures
-To run the code from pretrained data, you will have to download the pickle files from : [Pretrained Data](https://drive.google.com/drive/folders/1DWARVZnnqjK4xeCS3KTQ4b5Ky_EU_Ikz?usp=sharing) and place them in the `\pickle` folder of the repository.
+To run the code from pretrained data, you will have to download the pickle files from : [Pretrained Data](https://drive.google.com/drive/folders/1DWARVZnnqjK4xeCS3KTQ4b5Ky_EU_Ikz?usp=sharing) and place them in the `\pickle` folder of the repository. Note that some of the files are already present while the others need to be downloaded.
 
 - ### Running in jupyter-notebook
 Download the repository and open jupyter-notebook file present in `/jupyter/Quran Search Engine.ipynb`.</br>
