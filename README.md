@@ -37,9 +37,24 @@ The first cell of this notebook has some important variables that can be tinkere
 Download the repository and navigate to `\src` folder. <\br>
 The `main.py` file is the main program that runs the search engine. We have 3 additional command line arguments that determine the setting in which the program is run.
 
-``
-python3 main.py 'dataset_path' use_pretrained_data verse_suggestion_setting
-``
+```
+python3 main.py 'dataset_path' use_saves verse_suggestion_setting
+```
+
+The variables take the following values :
+-**'dataset path'** : a string indicating the location of the main dataset (Quran.csv).
+-**use_saves** : 1 for using pretrained data, 0 to run from scratch.
+-**verse_suggestion_setting** : 1 for 'preprocessed explanations', 2 for 'unpreprocessed explanations' and 3 for 'verse similarity'
+
+A command line argument which makes use of pretrained data and uses verse similarity for suggestions would look like :
+```
+python3 main.py '../data/Quran.csv' 1 3
+```
+
+A command line argument that runs the program from scratch and uses unpreprocessed explanations for suggestions would look like :
+```
+python3 main.py '../data/Quran.csv' 1 2
+```
 
 
 
