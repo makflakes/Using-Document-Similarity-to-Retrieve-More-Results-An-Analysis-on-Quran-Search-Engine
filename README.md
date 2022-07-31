@@ -60,7 +60,7 @@ python3 main.py '../data/Quran.csv' 1 3
 
 A command line argument that runs the program from scratch and uses unpreprocessed explanations for suggestions would look like :
 ```
-python3 main.py '../data/Quran.csv' 1 2
+python3 main.py '../data/Quran.csv' 0 2
 ```
 Your code should be good to go and you can now query the search engine.
 
