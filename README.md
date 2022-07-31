@@ -41,7 +41,7 @@ The `main.py` file is the main program that runs the search engine. We have 3 ad
 python3 main.py 'dataset_path' use_saves verse_suggestion_setting
 ```
 
-The variables take the following values :
+The variables take the following values :</br>
 -**'dataset path'** : a string indicating the location of the main dataset (Quran.csv).
 -**use_saves** : 1 for using pretrained data, 0 to run from scratch.
 -**verse_suggestion_setting** : 1 for 'preprocessed explanations', 2 for 'unpreprocessed explanations' and 3 for 'verse similarity'
