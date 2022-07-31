@@ -40,7 +40,7 @@ The first cell of this notebook has some important variables that can be tinkere
 - **use_loaded_spacy_maps** : set this value to 1 to use pretrained spaCy objects, 0 to create spaCy objects in real time.
 - **use_verse_suggestion** : 1 for 'verse similarity', 2 for 'preprocessed explanation similarity', 3 for 'unpreprocessed explanation simialrity'
 
-### Running in Python 3
+- ### Running in Python 3
 Download the repository and navigate to `\src` folder. <\br>
 The `main.py` file is the main program that runs the search engine. We have 3 additional command line arguments that determine the setting in which the program is run.
 
