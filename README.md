@@ -19,14 +19,16 @@ spacy.cli.download("en_core_web_lg")
 ```
 
 ## Running the code
-This code is available in both python3 (/src) and jupyter-notebook (/jupyter).
+This code is available in both python3 `/src` and jupyter-notebook `/jupyter`.
 The code can be run using the pretrained and computed data structures or running it from scratch.
+
+### Precomputed vectors and data structures
+To run the code from pretrained data, you will have to download the pickle files from : [Pretrained Data](https://drive.google.com/drive/folders/1DWARVZnnqjK4xeCS3KTQ4b5Ky_EU_Ikz?usp=sharing) and place them in the `\pickle` folder of the repository.
 
 ### Running in jupyter-notebook
 Download the repository and open jupyter-notebook 
 
-### Running from precomputed vectors and data structures
-To run the code from pretrained data, you will have to download the pickle files from : [Pretrained Data](https://drive.google.com/drive/folders/1DWARVZnnqjK4xeCS3KTQ4b5Ky_EU_Ikz?usp=sharing) and place them in the `\pickle` folder of the repository.
+
 
 
 
