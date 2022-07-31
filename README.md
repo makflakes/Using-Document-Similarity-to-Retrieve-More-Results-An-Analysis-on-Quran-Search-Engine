@@ -22,5 +22,5 @@ spacy.cli.download("en_core_web_lg")
 The code can be run using the pretrained and computed data structures or running it from scratch.
 
 ### Running from precomputed vectors and data structures
-To run the code from pretrained data, you will have to download the pickle files from : [Pretrained Data]([https://github.com/user/repo/blob/branch/other_file.md](https://drive.google.com/drive/folders/1DWARVZnnqjK4xeCS3KTQ4b5Ky_EU_Ikz?usp=sharing)) and place them in the `\pickle` folder of the repository.
+To run the code from pretrained data, you will have to download the pickle files from : [Pretrained Data](https://github.com/user/repo/blob/branch/other_file.md](https://drive.google.com/drive/folders/1DWARVZnnqjK4xeCS3KTQ4b5Ky_EU_Ikz?usp=sharing) and place them in the `\pickle` folder of the repository.
 
