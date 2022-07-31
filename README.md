@@ -38,7 +38,7 @@ The first cell of this notebook has some important variables that can be tinkere
 - **use_loaded_inverted_index** : set this value to 1 to use pretrained invertedindex, 0 to create the inverted index from scratch.
 - **use_loaded_tfidf** : set this value to 1 to use pretrained tfidf vectors, 0 to create tfidf vectors from scratch
 - **use_loaded_spacy_maps** : set this value to 1 to use pretrained spaCy objects, 0 to create spaCy objects in real time.
-- **use_verse_suggestion** : 1 for 'verse similarity', 2 for 'preprocessed explanation similarity', 3 for 'unpreprocessed explanation simialrity'
+- **use_verse_suggestion** : 1 for 'preprocessed explanations', 2 for 'unpreprocessed explanations' and 3 for 'verse similarity'
 
 - ### Running in Python 3
 Download the repository and navigate to `\src` folder. <\br>
