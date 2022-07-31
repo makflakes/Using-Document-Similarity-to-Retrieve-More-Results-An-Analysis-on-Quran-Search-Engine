@@ -29,15 +29,10 @@ def boolean_retrieval(query, invindex, new_df, tokenwords, postlist, tfidfVector
     
     query=query.lower()
     tokens = re.findall(r'([A-Za-z]+)',query)
-    #print(tokens)
-    
-
-    #print(tokens)
 
     accepted_pos = ['VBN','VBG','VB','RP','RBS','RBR','RB','NNS','NNP','NN','JJS','JJR','JJ']
 
     query_words = nltk.pos_tag(tokens)
-    #print(query_words)
 
     query_list =[]
 

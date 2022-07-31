@@ -24,27 +24,7 @@ import time
 import regex as re
 import pickle
 
-use_loaded_exp_prep_maps=1 #change this to 0 if you would like to run spacy mapping from scratch (can take >30mins)
-
-disjoint_explanations_prep=[]
-disjoint_explanations_unprep=[]
-disjoint_verses=[]
-
-if use_loaded_exp_prep_maps == 1:
-    
-    print('Loading spacy nlp objects from pickle files, this can take a moment...')
-    
-    with open("../pickle/disjoint_expl_prep", "rb") as fp:   # Unpickling
-       disjoint_explanations_prep = pickle.load(fp)
-    
-    with open("../pickle/disjoint_expl_unprep", "rb") as fp:   # Unpickling
-       disjoint_explanations_unprep = pickle.load(fp)
-    
-    with open("../pickle/disjoint_verses", "rb") as fp:   # Unpickling
-       disjoint_verses = pickle.load(fp)
-    
-    print('Completed!')
-
+#Mapping to spaCy vector space for each of the three settings
 def verses(new_df, nlp):
     all_verses = new_df["Translation"].tolist()
     dj_verses = all_verses.copy()

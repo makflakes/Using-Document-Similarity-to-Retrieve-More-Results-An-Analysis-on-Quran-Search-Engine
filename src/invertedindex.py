@@ -19,9 +19,6 @@ import regex as re
 
 #IMPORTANT VARIABLES TO TINKER
 subset_size = 1137 #the amount of rows to be taken from the humongous dataset (0 - for full dataset)
-samples_invindex = 7 #the amount of samples of the inverted index to display (0 - for full inverted index)
-samples_postlist = 7 #the amount of samples of postings list to display (0 - for full posting list)
-samples_intersect = 7 #the amount of text samples of intersection to display (0 - all intersected tweets)
 
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -54,7 +51,7 @@ def index(filename):
         new_df = df[0:subset_size]
     print(new_df)
     
-    #Preprocessing and adding new column "Clean Tweets" which will form our searchable tokens and "Original Text", which will preserve our text in string form.
+    #Preprocessing and adding new column "Clean_Texts" which will form our searchable tokens and "Original_Text", which will preserve our text in string form.
     print("Removing NEWLINE and TAB")
     new_df['Text'] = new_df['Tafsir'].str.replace(r'\d+','')
     new_df["Text"] = new_df['Tafsir'].str.replace('NEWLINE','')
@@ -83,7 +80,7 @@ def index(filename):
     global tokenwords
     global postsizes
     
-    tokenslist = new_df['Clean_Text'].to_list() #creating a list of list out of tweet tokens
+    tokenslist = new_df['Clean_Text'].to_list() #creating a list of list out of explanation tokens
     flatlist = list(np.concatenate(tokenslist)) #creating a 1D list to count all unique tokens
     counts = Counter(flatlist) #counting tokens
     

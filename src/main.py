@@ -34,9 +34,6 @@ import versesuggestion
 
 #IMPORTANT VARIABLES TO TINKER
 subset_size = 1137 #the amount of rows to be taken from the humongous dataset (0 - for full dataset)
-samples_invindex = 7 #the amount of samples of the inverted index to display (0 - for full inverted index)
-samples_postlist = 7 #the amount of samples of postings list to display (0 - for full posting list)
-samples_intersect = 7 #the amount of text samples of intersection to display (0 - all intersected tweets)
 
 nltk.download('punkt')
 nltk.download('stopwords')
@@ -90,36 +87,14 @@ if use_loaded_inverted_index == '1':
     new_df = pd.read_pickle('../pickle/new_df')
     
 else:
-    invindex, postlist, new_df, tokenwords = ii.index('../data/Quran.csv') #postlist stores the posting list, invertedindex stores the complete inverted index.
-
-'''
-#Printing first n elements of each (samples_invindex variable under IMPORTANT VARIABLES) and showing how index matching is synchronous (hashmap between tokenwords and posting list is a success).
-if (samples_invindex==0):
-    print("Full inverted index:")
-    print(invindex)
-else:
-    print("\n First %d elements of inverted index" %samples_invindex)
-    n_items = more_itertools.take(samples_invindex, invindex.items())
-    print(n_items)
-        
-if (samples_postlist == 0):
-    print("Full postings list:")
-    print(postlist)
-else:
-    print("\nFirst %d elements of posting list" %samples_postlist)
-    print(postlist[:samples_postlist])
-'''  
-    
-    
-#result = query( "nation") #Returns complete postlist for a single term
-#print(result)
-
-#result = query( "sin", "forgive") #Returns intersection of postlist of both terms.
+    invindex, postlist, new_df, tokenwords = ii.index('../data/Quran.csv') #postlist stores the posting list, invertedindex stores the complete inverted index, new_df is the augmented dataset, tokenwords are all the terms in the dataset after preprocessing.
 
 
-#Spell Correction
+
+#Spelling Correction Variables
 import spacy.cli
-#spacy.cli.download("en_core_web_lg")
+#uncomment the line below to download the en_core_web_lg for your spaCy version.
+#spacy.cli.download("en_core_web_lg") 
 nlp = spacy.load("en_core_web_lg")
 
 tokenizer = Tokenizer(nlp.vocab)
@@ -127,8 +102,7 @@ tokenizer = nlp.tokenizer
 all_words = set(list((itertools.chain(*[[t.text for t in tokenizer(row.lower()) if t.is_alpha] for row in new_df[~new_df['Tafsir'].isna()]['Tafsir'].to_list()]))))
 
 #Ranking TF-IDF Vectors
-
-clean_texts = new_df['Clean_Text'].to_list()
+clean_texts = new_df['Clean_Text'].to_list()  #preprocessed data
 
 docfreq = {}
 no_of_docs = len(clean_texts)
@@ -161,12 +135,15 @@ disjoint_docs = []
 if use_saves == '1':
     print('Loading spacy nlp objects from pickle files, this can take a moment...')
     if suggestion == '1':
+        print('Using preprocessed explanations for further suggestions...')
         with open("../pickle/disjoint_expl_prep", "rb") as fp:   # Unpickling
             disjoint_explanations_prep = pickle.load(fp)
     if suggestion == '2':
+        print('Using unpreprocessed explanations for further suggestions...')
         with open("../pickle/disjoint_expl_unprep", "rb") as fp:   # Unpickling
             disjoint_explanations_unprep = pickle.load(fp)
     if suggestion == '3':
+        print('Using verses for further suggestions...')
         with open("../pickle/disjoint_verses", "rb") as fp:   # Unpickling
             disjoint_verses = pickle.load(fp)
     
@@ -174,10 +151,13 @@ if use_saves == '1':
 
 elif use_saves=='0':
     if suggestion =='1':
+        print('Using and creating preprocessed explanations spacy objects for further suggestions...this may take upto 15mins')
         disjoint_explanations_prep = spacymapdocuments.p_explanations(new_df, nlp)
     if suggestion =='2':
+        print('Using and creating unpreprocessed explanations spacy objects for further suggestions...this may take upto 15mins')
         disjoint_explanations_unprep=spacymapdocuments.n_explanations(new_df, nlp)
     if suggestion =='3':
+        print('Using and creating verses spacy objects for further suggestions...this may take upto 15mins')
         disjoint_verses=spacymapdocuments.verses(new_df, nlp)
         
 
@@ -192,10 +172,10 @@ toc = time.perf_counter()
 print(f"Completed in {toc - tic:0.4f} seconds")
 
 
+
 #Main Query Code:
 
 print('\n Welcome to the Quran Search Engine :\n')
-
 
 while True:
 
@@ -208,9 +188,7 @@ while True:
     if query=='q':
         break
 
-    
     results, suggestedverses = versesuggestion.setting(suggestion, query, disjoint_docs, invindex, new_df, tokenwords, postlist, tfidfVector, nlp, all_words)
-    #print(results)
     
     if results:
         print('Results :')

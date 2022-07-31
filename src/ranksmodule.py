@@ -24,10 +24,11 @@ import pickle
 
 global clean_texts
 
+
+#Function to compute tf-idf scores
 def tfidf_comp(clean_texts, docfreq, no_of_docs, no_of_words, method=None):
     
     tfidf = {}
-    #total_tokens = len(tokensfreq)
 
     for i in range(len(clean_texts)):
         text = clean_texts[i]
@@ -48,7 +49,7 @@ def tfidf_comp(clean_texts, docfreq, no_of_docs, no_of_words, method=None):
     tfidf = collections.OrderedDict(sorted(tfidf.items()))
     return tfidf
 
-
+#Function that returns the tf-idf Vector, for each document.
 def computeTFIDFVector(text, wordDict, tfidf):
     tfidfVector = [0.0] * len(wordDict)
     
@@ -56,7 +57,6 @@ def computeTFIDFVector(text, wordDict, tfidf):
         if word in text:
             tfidfVector[i] = tfidf[word]
     return tfidfVector
-
 
 def dot_product(vector_x, vector_y):
     dot = 0.0
@@ -82,7 +82,6 @@ def cosine_score(text1, new_df, tfidfVector, text2=None):
        
         for i in range(len(tfidfVector)):
             cosim = dot_product(tfidfVector[index_t1], tfidfVector[i])/ (magnitude(tfidfVector[index_t1]) * magnitude(tfidfVector[i]))
-            #sim_docs.append(cosim)
             
             doc_cos_pair[i] = cosim
             
@@ -103,7 +102,6 @@ def cosine_score(text1, new_df, tfidfVector, text2=None):
 def ranking(docids, query_list, new_df, tfidfVector):
     
     relevantquery = ' '.join(query_list)
-    #print(relevantquery)
     ranktuple = []
     
     for i in docids:

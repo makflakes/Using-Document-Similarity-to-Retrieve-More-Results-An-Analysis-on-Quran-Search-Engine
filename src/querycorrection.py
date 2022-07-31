@@ -5,7 +5,7 @@ import spacy
 from spacy.tokenizer import Tokenizer
 
 
-
+#Levenshtein Distance Calculation
 def levenshtein(token1, token2):
     size_x = len(token1) + 1
     size_y = len(token2) + 1
@@ -32,6 +32,7 @@ def levenshtein(token1, token2):
     # print (matrix)
     return (matrix[size_x - 1, size_y - 1])
 
+#Using Levenshtein
 def spell_recommendation(query_token, tokens):
     scores  = {}
     for t in tokens:
@@ -41,6 +42,7 @@ def spell_recommendation(query_token, tokens):
             print(scores)
     return [i[0] for i in sorted(scores.items(), key=lambda kv: (kv[1], kv[0]))]
 
+#Dictionary for Linguistic Variation
 variation_dict = {('aadam'):'adam',
                     ('eve', 'hava'):'hawa',
                     ('enoch', 'idrees', 'edris', 'idrissa'): 'idris',

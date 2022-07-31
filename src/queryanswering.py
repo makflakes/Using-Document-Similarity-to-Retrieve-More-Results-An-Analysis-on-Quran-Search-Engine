@@ -47,46 +47,25 @@ def query_ir(termlist, explanation, new_df, tokenwords, postlist):
     
     
         
+    #in the case that there are 2 or more terms from the query
     else: 
         chapverlist=[]
         
         collectedpostlists = []
         
         for i in range (0, len(termlist)):
-            #if postlist[tokenwords.index(termlist[i])]:
+            
             if termlist[i] in tokenwords:
                 collectedpostlists.append(postlist[tokenwords.index(termlist[i])])
             else:
                 continue
             
                         
-                        
-        
-        #collectedpostlists.append(postlist[tokenwords.index(termlist[i])])
-            
-            
-        #postlist_t1 = postlist[tokenwords.index(term1)] #Retreive postlist of term1
-        #postlist_t2 = postlist[tokenwords.index(term2)] #Retrieve postlist of term2
-    
-        #Get lengths of postlists
-        #len_t1 = len(postlist_t1) 
-        #len_t2 = len(postlist_t2)
-    
-        #Create an iterator for postlists
-        #iter_t1 = iter(postlist_t1)
-        #iter_t2 = iter(postlist_t2)
         
         if collectedpostlists:
             intersectlist=list(set.intersection(*[set(x) for x in collectedpostlists]))  #Our soon to be intersection of both postlists.
         else:
             return chapverlist
-        
-        #print(intersectlist)
-        
-        #print(intersectlist)
-        #Initialising iterators with first value of both postlists
-        #i1 = next(iter_t1) 
-        #i2 = next(iter_t2)
         
         
         #PostList Intersection Logic
@@ -94,24 +73,8 @@ def query_ir(termlist, explanation, new_df, tokenwords, postlist):
         We first check if both the iterators represent the same term. If they do, they get added to the intersection list.
         If not, the iterator with the smaller value goes to its next posting. This continues till both lists are exhausted.
         '''
-        '''
-        for i in range(0, len_t1+len_t2):
-            if (i1==i2):
-                intersectlist.append(i1)
-                i1=next(iter_t1,0)
-                i2=next(iter_t2,0)
-            elif (i1>i2):
-                i2=next(iter_t2,0)
-            elif(i2>i1):
-                i1=next(iter_t1,0)
-        '''
         
         #PostList Intersection Completed
-                    
-        #print("\nIntersection List for '" + term1 +"' and '" + term2 +"' is as follows :")
-        #print(intersectlist)
-        
-        #print("\nExamples : ")
         
         samples = new_df[['Chapter', 'Verse', 'Translation','Tafsir']].iloc[intersectlist]
         
@@ -128,8 +91,5 @@ def query_ir(termlist, explanation, new_df, tokenwords, postlist):
                 
                 chapver = '0'+ str(samples['Chapter'].iloc[i]) + str(samples['Verse'].iloc[i])
                 chapverlist.append(chapver)
-            
-                #if(i==samples_intersect):
-                #    break
         
         return(chapverlist, intersectlist)

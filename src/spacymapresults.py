@@ -1,9 +1,9 @@
 import pandas as pd
 
+
+
+#Mapping the explanations results documents to spaCy 
 def expl_spacy_map(docids, nlp, new_df, use_plain_explanations=False):
-    """
-    
-    """
     
     if use_plain_explanations is True:
         #print('Using plain explanations...')
@@ -23,8 +23,8 @@ def expl_spacy_map(docids, nlp, new_df, use_plain_explanations=False):
         
     return result_expl_list, all_explanations
 
-#result_expl_list, all_explanations = spacy_map1(ranks)
 
+#Mapping the verse results documents to spaCy 
 def verse_spacy_map(ranks, nlp, new_df):
     
     all_verses = new_df["Translation"].tolist()
