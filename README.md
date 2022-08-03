@@ -67,6 +67,15 @@ python3 main.py '../data/Quran.csv' 0 2
 ```
 Your code should be good to go and you can now query the search engine.
 
+### Results of Verse Suggestion compared to base Boolean Retrieval Model
+
+| Method                                          | Precision  | Recall    |   F1   |
+| ------------------------------------------------| ---------- | ----------|--------|
+| Boolean Retrieval                               | 0.44       | 0.43      |0.34    |
+| Boolean Retrieval + Preprocessed Expalanations  | 0.36       | 0.51      |0.30    |
+| Boolean Retrieval + Unpreprocessed Expalanations| 0.35       | 0.50      |0.29    |
+| Boolean Retrieval + Verse Translation           | 0.34       | 0.50      |0.28    |
+
 ### Acknowledgements
 This paper was written for the course "Computational Lingustics Team Labs, 2022" as part of Masters programme in Computational Linguistics at University of Stuttgart. We would like to thank Dr. Roman Klinger and Mr. Yarik Menchaca Resendiz for their continued support, guidance and motivation throughout the course of the proejct.
 
