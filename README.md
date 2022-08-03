@@ -78,7 +78,7 @@ Our experiments show a higher recall over the baseline Boolean Retrieval algorit
 | Boolean Retrieval + Verse Translation           | 0.34       | **0.50**      |0.28    |
 
 ## Acknowledgements
-This paper was written for the course "Computational Lingustics Team Labs, 2022" as part of Masters programme in Computational Linguistics at University of Stuttgart. We would like to thank Dr. Roman Klinger and Mr. Yarik Menchaca Resendiz for their continued support, guidance and motivation throughout the course of the proejct.
+This paper and implementation was developed for the course "Computational Lingustics Team Labs, 2022" as part of Masters programme in Computational Linguistics at University of Stuttgart. We would like to thank Dr. Roman Klinger and Mr. Yarik Menchaca Resendiz for their continued support, guidance and motivation throughout the course of the proejct.
 
 
 
