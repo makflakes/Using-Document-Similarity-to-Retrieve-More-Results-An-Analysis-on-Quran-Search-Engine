@@ -2,9 +2,9 @@
 Computational Linguistics Team Lab Project, SS 2022 </br>
 
 **Authors** : </br> 
-- Mohammed Abdul Khaliq (st181091@mail.uni-stuttgart.de) 
-- Ufkun-Bayram Menderes (st181325@mail.uni-stuttgart.de)
-- Muhammad Saad Magdi (st176978@mail.uni-stuttgart.de) 
+- Mohammed Abdul Khaliq (st181091@stud.uni-stuttgart.de) 
+- Ufkun-Bayram Menderes (st181325@stud.uni-stuttgart.de)
+- Muhammad Saad Magdi (st176978@stud.uni-stuttgart.de) 
 
 ## Dataset
 The dataset used for our project is the English Translation of the Quran alongwith the Tafsir of Ibn Kathir (https://www.alim.org/quran/tafsir/ibn-kathir/). The dataset available in the repository was constructed by us and has 1137 verses of the Quran alongwith their translation and explanation.
@@ -78,7 +78,7 @@ Our experiments show a higher recall over the baseline Boolean Retrieval algorit
 | Boolean Retrieval + Verse Translation           | 0.34       | **0.50**      |0.28    |
 
 ## Acknowledgements
-This paper and implementation was developed for the course "Computational Lingustics Team Labs, 2022" as part of Masters programme in Computational Linguistics at University of Stuttgart. We would like to thank Dr. Roman Klinger and Mr. Yarik Menchaca Resendiz for their continued support, guidance and motivation throughout the course of the proejct.
+This paper and implementation were developed for the course "Computational Lingustics Team Labs, 2022" as part of Masters programme in Computational Linguistics at University of Stuttgart. We would like to thank Dr. Roman Klinger and Mr. Yarik Menchaca Resendiz for their continued support, guidance and motivation throughout the course of the proejct.
 
 
 
