@@ -68,6 +68,7 @@ python3 main.py '../data/Quran.csv' 0 2
 Your code should be good to go and you can now query the search engine.
 
 ### Results of Verse Suggestion compared to base Boolean Retrieval Model
+Our experiments show a higher recall over the baseline Boolean Retrieval algorithm when making use of document similarity using either of the 3 proposed methods.
 
 | Method                                          | Precision  | Recall    |   F1   |
 | ------------------------------------------------| ---------- | ----------|--------|
