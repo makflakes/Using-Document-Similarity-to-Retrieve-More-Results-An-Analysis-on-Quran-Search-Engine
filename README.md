@@ -6,13 +6,16 @@ Computational Linguistics Team Lab Project, SS 2022 </br>
 - Ufkun-Bayram Menderes (st181325@mail.uni-stuttgart.de)
 - Muhammad Saad Magdi (st176978@mail.uni-stuttgart.de) 
 
+### Dataset
+The dataset used for our project is the English Translation of the Quran alongwith the Tafsir of Ibn Kathir (https://www.alim.org/quran/tafsir/ibn-kathir/). The dataset available in the repository was constructed by us and has 1137 verses of the Quran alongwith their translation and explanation.
+
 ### Program Flow
 ![Screenshot](/figures/Untitled-1.png)
 
 ## Prerequisites
 Please make sure to download the relevant libraries from requirements.txt file :
 ```
-pip3 install requirements.txt
+pip3 install -r requirements.txt
 ```
 For this code to work properly, it is essential to have spaCy version 2.3.x.</br>
 If it isnt already downloaded, run the following command :
