@@ -6,10 +6,10 @@ Computational Linguistics Team Lab Project, SS 2022 </br>
 - Ufkun-Bayram Menderes (st181325@mail.uni-stuttgart.de)
 - Muhammad Saad Magdi (st176978@mail.uni-stuttgart.de) 
 
-### Dataset
+## Dataset
 The dataset used for our project is the English Translation of the Quran alongwith the Tafsir of Ibn Kathir (https://www.alim.org/quran/tafsir/ibn-kathir/). The dataset available in the repository was constructed by us and has 1137 verses of the Quran alongwith their translation and explanation.
 
-### Program Flow
+## Program Flow
 ![Screenshot](/figures/Untitled-1.png)
 
 ## Prerequisites
@@ -67,7 +67,7 @@ python3 main.py '../data/Quran.csv' 0 2
 ```
 Your code should be good to go and you can now query the search engine.
 
-### Results of Verse Suggestion compared to base Boolean Retrieval Model
+## Results of Verse Suggestion compared to base Boolean Retrieval Model
 Our experiments show a higher recall over the baseline Boolean Retrieval algorithm when making use of document similarity using either of the 3 proposed methods.
 
 | Method                                          | Precision  | Recall    |   F1   |
@@ -77,7 +77,7 @@ Our experiments show a higher recall over the baseline Boolean Retrieval algorit
 | Boolean Retrieval + Unpreprocessed Expalanations| 0.35       | 0.50      |0.29    |
 | Boolean Retrieval + Verse Translation           | 0.34       | 0.50      |0.28    |
 
-### Acknowledgements
+## Acknowledgements
 This paper was written for the course "Computational Lingustics Team Labs, 2022" as part of Masters programme in Computational Linguistics at University of Stuttgart. We would like to thank Dr. Roman Klinger and Mr. Yarik Menchaca Resendiz for their continued support, guidance and motivation throughout the course of the proejct.
 
 
